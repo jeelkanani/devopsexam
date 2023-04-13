@@ -1,6 +1,13 @@
 pipeline {
   agent any
 
+  environment {
+        NEW_VERSION = '1.3'
+     }
+  tools{
+        maven 'maven-3.6.3'
+    }
+
   stages {
     stage('Build') {
       steps {
